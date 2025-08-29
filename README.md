@@ -1,4 +1,4 @@
-# Command Executor TUI
+# Batch Command Executor TUI
 
 A simple, portable, single-file Python script that provides a Terminal User Interface (TUI) for executing a command over a list of objects (like servers, users, etc.).
 
