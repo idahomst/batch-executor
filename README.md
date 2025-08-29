@@ -9,20 +9,20 @@ It allows you to monitor the real-time output of your commands and see the statu
 Here is a preview of the TUI when running a `ping` command over a list of servers:
 
 ```
-+-----------------------------------------------------------------------------+
-| Objects               | Live Output: server1.example.com                    |
-|                       |                                                     |
-| [▶] server1.example.com | PING server1.example.com (192.168.1.10): 56 data bytes |
-| [ ] server2.example.com | 64 bytes from 192.168.1.10: icmp_seq=0 ttl=64 time=5.23 ms |
-| [ ] bad-server.local  | 64 bytes from 192.168.1.10: icmp_seq=1 ttl=64 time=5.78 ms |
-| [ ] another-host.com  | 64 bytes from 192.168.1.10: icmp_seq=2 ttl=64 time=4.99 ms |
-| ...                   |                                                     |
-|                       | --- server1.example.com ping statistics ---         |
-|                       | 3 packets transmitted, 3 packets received, 0% packet loss |
-|                       |                                                     |
-+-----------------------------------------------------------------------------+
-| All jobs completed. Press any key to exit.                                  |
-+-----------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+| Objects                  | Live Output: server1.example.com                           |
+|                          |                                                            |
+| [▶] server1.example.com | PING server1.example.com (192.168.1.10): 56 data bytes     |
+| [ ] server2.example.com  | 64 bytes from 192.168.1.10: icmp_seq=0 ttl=64 time=5.23 ms |
+| [ ] bad-server.local     | 64 bytes from 192.168.1.10: icmp_seq=1 ttl=64 time=5.78 ms |
+| [ ] another-host.com     | 64 bytes from 192.168.1.10: icmp_seq=2 ttl=64 time=4.99 ms |
+| ...                      |                                                            |
+|                          | --- server1.example.com ping statistics ---                |
+|                          | 3 packets transmitted, 3 packets received, 0% packet loss  |
+|                          |                                                            |
++---------------------------------------------------------------------------------------+
+| All jobs completed. Press any key to exit.                                            |
++---------------------------------------------------------------------------------------+
 ```
 
 ## Features
