@@ -32,7 +32,7 @@ Here is a preview of the TUI when running a `ping` command over a list of server
 
 ## Features
 
-- **Rich TUI Interface**: Clear, colorful terminal interface that shows object status and live command output side-by-side.
+- **TUI Interface**: Clear, colorful terminal interface that shows object status and live command output side-by-side.
 - **Real-time Status**: Each object is marked with its status: Pending `[ ]`, Running `[▶]`, Success `[✔]`, Fail `[✖]`, or Skipped `[—]`.
 - **Scrollable Output Log**: The right pane is a continuous, terminal-like log of every object's combined stdout and stderr. Output is never overwritten — each object is appended under a `=== object ===` header. The pane auto-follows the newest output (like `tail -f`); scroll up to review older messages and it stops following until you return to the bottom.
 - **Keyboard Controls**: Scroll the output pane any time — during a run, at a failure prompt, or in the end-of-run review — with **Up/Down** (line), **PgUp/PgDn** (page), **Home/End** (top/bottom; End resumes auto-follow).
@@ -45,7 +45,7 @@ Here is a preview of the TUI when running a `ping` command over a list of server
 - **Secure & Robust Command Parsing**: Uses Python's `shlex` module to parse commands. This prevents the local shell from expanding variables (like `$HOSTNAME`), allowing them to be correctly expanded on the remote machine. It also handles object names with spaces or special characters automatically.
 - **Signal Handling**: Graceful cleanup on Ctrl+C or SIGTERM — terminates running subprocesses and restores terminal state.
 - **Execution Summary**: Reports final counts of total, successful, failed, and skipped items. Failed objects are listed by name with their exit code and failure reason (e.g. `Connection refused`), both in the on-screen review and in a persistent report printed to your terminal scrollback after exit.
-- **Portable**: It's a single Python script with no external dependencies. Just copy it to a server and run.
+- **Portable**: A single Python script with no third-party dependencies — it runs on any Unix-like system (Linux, macOS, BSD) using only the standard library. Just copy it to a server and run. (Windows is not supported: the `curses` module isn't bundled with Windows Python, and the live-output streaming relies on `select()` over pipes, which is POSIX-only.)
 
 ## Requirements
 
